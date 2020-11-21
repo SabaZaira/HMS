@@ -9,6 +9,14 @@ public class Time
 		this.min=min;
 		this.apm=apm;
 	}
+	public Time(String tim) {
+		// TODO Auto-generated constructor stub
+		String s[]=tim.split(":");
+		String s1[]=s[1].split(" ");
+		this.hours=Integer.parseInt(s[0]);
+		this.min=Integer.parseInt(s1[0]);
+		this.apm=s1[1];
+	}
 	void setHours(int hours)
 	{
 		this.hours=hours;

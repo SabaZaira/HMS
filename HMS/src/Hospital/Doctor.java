@@ -38,4 +38,7 @@ public class Doctor
 	String getGender() {
 		return gender;
 	}
+	public String toString() {
+		return "Doctor : "+name+"cnic : "+cnic+"Department : "+department +" Gender : "+gender+"specialization : "+specialization;
+	}
 }

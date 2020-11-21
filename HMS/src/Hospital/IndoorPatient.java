@@ -1,13 +1,14 @@
 package Hospital;
 import General.Date;
-public abstract class IndoorPatient extends Patient
+import General.Time;
+public class IndoorPatient extends Patient
 {
 	String wardno,roomno,bedno;
 	double fee;
 	Doctor doc;
 	String n,c,p,g,dep,s;
 	Date d;
-	public IndoorPatient(String name, String address, String cnic, String phone, String age, String gender, String wardno,String roomno, String bedno, double fee, Doctor doc, Date d) 
+	public IndoorPatient(String name, String address, String cnic, String phone, String age, String gender, String wardno,String roomno, String bedno, double fee, Doctor doc,String dat) 
 	{
 		super(name, address, cnic, phone, age, gender);
 		this.wardno = wardno;
@@ -15,7 +16,7 @@ public abstract class IndoorPatient extends Patient
 		this.bedno = bedno;
 		this.fee = fee;
 		this.doc = doc;
-		this.d = d;
+		d =new Date(dat);
 	}
 	public void setFee(int fee) {
 		this.fee=fee;
@@ -55,5 +56,10 @@ public abstract class IndoorPatient extends Patient
 	public String toString()
 	{
 		 return "indoor patient name : "+name+" cnic : "+cnic+" phone : "+phone+" gender : "+gender+" age : "+age+" ward no : "+wardno+" room no : "+roomno+"bed no : "+bedno+"fee : "+fee+"DOCTOR : "+doc;
+	}
+	@Override
+	void setTime(Time time) {
+		// TODO Auto-generated method stub
+		
 	}
 }

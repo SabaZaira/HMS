@@ -8,11 +8,11 @@ public class OutdoorPatient extends Patient
 	String n,c,p,g,dep,s;
 	Doctor doc;
 	double fee;
-	public OutdoorPatient(String name, String address, String cnic, String phone, String age, String gender,Date apDate, Time apTime, Doctor doc, int fee) 
+	public OutdoorPatient(String name, String address, String cnic, String phone, String age, String gender,String dat,String tim, Doctor doc, double fee) 
 	{
 		super(name, address, cnic, phone, age, gender);
-		this.d = apDate;
-		this.t = apTime;
+		d =new Date(dat);
+		t=new Time(tim);
 		this.doc = doc;
 		this.fee = fee;
 	}
